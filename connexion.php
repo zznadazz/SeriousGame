@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$bdd= new PDO('mysql:host=localhost;dbname=serious_game;charset=utf8;', 'root', '');
+$bdd= new PDO('mysql:host=193.203.168.3;dbname=u677866956_prod;charset=utf8;', 'u677866956_compte_prod', '!bEn7eS76=R%');
 
 if (isset($_POST['login'])){
     $username = $_POST['username']; 
@@ -108,7 +108,7 @@ if (isset($_POST['login'])){
         </div>
       </div>
 	    <button class="btn btn-block btn-default" type="submit" style="margin-top:20px" name="login" > Se Connecter</button>
-      <a class="btn btn-block btn-sm" href="forgot-password.html">mot de passe oublié</a>
+
 		</form>
     <br/><br/>
         </div>

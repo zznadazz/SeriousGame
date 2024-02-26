@@ -12,7 +12,7 @@ if(!$_SESSION['id']){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz sur le Protocole ARP</title>
+    <title>Quiz sur le Protocole HTTP</title>
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="assets/css/reset.css?1609499614"/>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css?1609499613"/>
@@ -40,8 +40,14 @@ if(!$_SESSION['id']){
             margin-bottom: 20px;
         }
         form p {
-            margin-bottom: 10px;
+            font-size: 30px; /* Remplacez la valeur par celle qui vous convient */
+   
+            margin-bottom: 30px;
             font-weight: bold;
+        }
+
+        form div {
+        margin-bottom: 20px; /* Ajoute une marge de 20px entre chaque groupe de réponses */
         }
         form label {
         margin-bottom: 10px; /* Add margin-bottom to create space between radio choices */
@@ -65,6 +71,7 @@ if(!$_SESSION['id']){
         }
         /* Popup styles */
         .popup {
+            color:black;
             display: none;
             position: fixed;
             top: 50%;
@@ -126,8 +133,7 @@ if(!$_SESSION['id']){
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-          <div class="container">
+
 
             <div class="collapse navbar-collapse" id="menu">
               <ul class="nav navbar-nav text-center" >
@@ -153,19 +159,22 @@ if(!$_SESSION['id']){
               </ul>
                 
             </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-    <h1>Quiz sur le Protocole DNS</h1>
+
+    <h1>Quiz sur le Protocole HTTP</h1>
     <img src="assets/img/logo.png" class="main-logo" style="max-width:300px; width:100%; margin-top:-60px; margin-bottom:20px" />
     <form onsubmit="submitForm(event)">
-        <h2>Qu'est-ce que l'acronyme HTTP signifie ?</h2>
+        <p>Qu'est-ce que l'acronyme HTTP signifie ?</p>
         <div>
-            <input type="radio" name="reponse" value="c"> <label for="reponse_c">HyperText Transfer Process</label><br>
-            <input type="radio" name="reponse" value="a"> <label for="reponse_a">HyperText Transfer Protocol</label><br>
+            <input type="radio" name="reponse" value="c" label for="reponse_c"> HyperText Transfer Process<br>
         </div>
         <div>
-            <input type="radio" name="reponse" value="b"> <label for="reponse_b">HyperText Transmission Process</label><br>
-            <input type="radio" name="reponse" value="d"> <label for="reponse_d">HyperText Transmission Protocol</label><br>
+            <input type="radio" name="reponse" value="a" label for="reponse_a"> HyperText Transfer Protocol<br>
+        </div>
+        <div>
+            <input type="radio" name="reponse" value="b" label for="reponse_b"> HyperText Transmission Process<br>
+        </div>
+        <div>
+            <input type="radio" name="reponse" value="d" label for="reponse_d"> HyperText Transmission Protocol<br>
         </div>
         <input type="submit" value="Soumettre">
     </form>
@@ -295,15 +304,16 @@ if(!$_SESSION['id']){
         };
 
         var popupText = document.getElementById('popup-text');
-        popupText.innerHTML = "Bravo, tu es désormais un vrai professionnel du protocole ARP.<br>Voulez-vous retourner aux sections ou en savoir plus sur le protocole ARP ?";
+        popupText.innerHTML = "Bravo, tu es désormais un vrai professionnel du protocole HTTP.<br>Voulez-vous retourner aux sections ou en savoir plus sur le protocole HTTP ?";
         popupButton.innerHTML = "Retourner aux sections";
         // Ajout du bouton "En savoir plus sur ce protocole"
         var learnMoreButton = document.createElement('button');
         learnMoreButton.innerHTML = "En savoir plus sur ce protocole";
         learnMoreButton.onclick = function() {
-            // Redirection vers la page d'informations ARP lorsque le bouton est cliqué
-            window.location.href = "en_savoir_plus_arp.php";
-        };
+    // Ouvre le lien dans une nouvelle fenêtre
+    window.open("https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol", "_blank");
+};
+
         popupText.appendChild(document.createElement('br'));
         popupText.appendChild(learnMoreButton);
 

@@ -40,13 +40,23 @@ if(!$_SESSION['id']){
             margin-bottom: 20px;
         }
         form p {
-            margin-bottom: 10px;
+            font-size: 30px; /* Remplacez la valeur par celle qui vous convient */
+   
+            margin-bottom: 30px;
             font-weight: bold;
         }
+
+        form div {
+        margin-bottom: 20px; /* Ajoute une marge de 20px entre chaque groupe de réponses */
+        }
+
         form label {
-        margin-bottom: 10px; /* Add margin-bottom to create space between radio choices */
+        margin-bottom: 0px; /* Add margin-bottom to create space between radio choices */
         display: block; /* Ensures each radio choice appears on a new line */
         }
+        
+
+
 
         input[type="radio"] {
             margin-right: 10px;
@@ -65,6 +75,7 @@ if(!$_SESSION['id']){
         }
         /* Popup styles */
         .popup {
+            color: black; /* Change the color of "Félicitations" to black */
             display: none;
             position: fixed;
             top: 50%;
@@ -158,14 +169,18 @@ if(!$_SESSION['id']){
     <h1>Quiz sur le Protocole ARP</h1>
     <img src="assets/img/logo.png" class="main-logo" style="max-width:300px; width:100%; margin-top:-60px; margin-bottom:20px" />
     <form onsubmit="submitForm(event)">
-        <h2>Qu'est-ce que le protocole ARP (Address Resolution Protocol)?</h2>
+        <p>Qu'est-ce que le protocole ARP (Address Resolution Protocol)?</p>
         <div>
-            <input type="radio" name="reponse" value="c"> <label for="reponse_c">Un protocole de sécurité utilisé pour chiffrer les communications réseau.</label><br>
-            <input type="radio" name="reponse" value="b"> <label for="reponse_b">Un protocole de routage utilisé pour déterminer le meilleur chemin pour les paquets de données.</label><br>
+            <input type="radio" name="reponse" value="c" label for="reponse_c">Un protocole de sécurité utilisé pour chiffrer les communications réseau.<br>
         </div>
         <div>
-            <input type="radio" name="reponse" value="a"> <label for="reponse_a">Un protocole de résolution d'adresse utilisé pour associer des adresses IP à des adresses MAC.</label><br>
-            <input type="radio" name="reponse" value="d"> <label for="reponse_d">Un protocole de transfert de fichiers utilisé pour copier des données entre des serveurs distants.</label><br>
+            <input type="radio" name="reponse" value="b" label for="reponse_b"> Un protocole de routage utilisé pour déterminer le meilleur chemin pour les paquets de données.<br>
+        </div>
+        <div>
+            <input type="radio" name="reponse" value="a" label for="reponse_a"> Un protocole de résolution d'adresse utilisé pour associer des adresses IP à des adresses MAC.</label><br>
+         </div>
+        <div>
+            <input type="radio" name="reponse" value="d" label for="reponse_d"> Un protocole de transfert de fichiers utilisé pour copier des données entre des serveurs distants.<br>
         </div>
         <input type="submit" value="Soumettre">
     </form>
@@ -225,59 +240,59 @@ if(!$_SESSION['id']){
     }
 
     function showNextQuestion() {
-        var questionElement = document.querySelector('p');
-        var radioElements = document.querySelectorAll('input[type="radio"]');
+            var questionElement = document.querySelector('p');
+            var radioElements = document.querySelectorAll('input[type="radio"]');
 
-        switch (currentQuestion) {
-            case 2:
-                questionElement.innerHTML = "Qu'est-ce qu'une attaque ARP?";
-                radioElements[0].nextSibling.nodeValue = " Une attaque visant à compromettre les informations stockées dans les cookies d'un navigateur.";
-                radioElements[1].nextSibling.nodeValue = " Une attaque ciblant le protocole de résolution d'adresse pour associer de manière incorrecte des adresses IP à des adresses MAC.";
-                radioElements[2].nextSibling.nodeValue = " Une attaque exploitant les vulnérabilités d'un pare-feu pour accéder à un réseau sécurisé.";
-                radioElements[3].nextSibling.nodeValue = " Une attaque de phishing visant à obtenir des informations sensibles en usurpant l'identité d'un site web.";
-                // Mettez à jour la réponse correcte et les mauvaises réponses
-                radioElements[1].value = "a"; // Correct answer
-                radioElements[0].value = "b";
-                radioElements[2].value = "c";
-                radioElements[3].value = "d";
-                break;
-            case 3:
-                questionElement.innerHTML = "Quelle est la différence entre ARP (Address Resolution Protocol) et RARP (Reverse Address Resolution Protocol)?";
-                radioElements[0].nextSibling.nodeValue = " ARP est utilisé pour associer des adresses MAC à des adresses IP, tandis que RARP est utilisé pour associer des adresses IP à des adresses MAC.";
-                radioElements[1].nextSibling.nodeValue = " ARP est utilisé pour associer des adresses IP à des adresses MAC, tandis que RARP est utilisé pour résoudre des noms de domaine.";
-                radioElements[2].nextSibling.nodeValue = " ARP est utilisé pour résoudre les adresses IP des serveurs DNS, tandis que RARP est utilisé pour configurer les adresses IP dynamiquement.";
-                radioElements[3].nextSibling.nodeValue = " ARP est utilisé pour router les paquets de données sur un réseau, tandis que RARP est utilisé pour vérifier la fiabilité des connexions réseau.";
-                // Mettez à jour la réponse correcte et les mauvaises réponses
-                radioElements[0].value = "a"; // Correct answer
-                radioElements[1].value = "b";
-                radioElements[2].value = "c";
-                radioElements[3].value = "d";
-                break;
-            case 4:
-                questionElement.innerHTML = "Si une attaque ARP est réalisée, quelle couche OSI est affectée ?";
-                radioElements[0].nextSibling.nodeValue = " Couche physique";
-                radioElements[1].nextSibling.nodeValue = " Couche liaison de données";
-                radioElements[2].nextSibling.nodeValue = " Couche réseau ";
-                radioElements[3].nextSibling.nodeValue = " Couche transport";
-                // Mettez à jour la réponse correcte et les mauvaises réponses
-                radioElements[0].value = "b"; // Correct answer
-                radioElements[1].value = "a";
-                radioElements[2].value = "c";
-                radioElements[3].value = "d";
-                break;
+            switch (currentQuestion) {
+                case 2:
+                    questionElement.innerHTML = "Qu'est-ce qu'une attaque ARP?";
+                    radioElements[0].nextSibling.nodeValue = " Une attaque visant à compromettre les informations stockées dans les cookies d'un navigateur.";
+                    radioElements[1].nextSibling.nodeValue = " Une attaque ciblant le protocole de résolution d'adresse pour associer de manière incorrecte des adresses IP à des adresses MAC.";
+                    radioElements[2].nextSibling.nodeValue = " Une attaque exploitant les vulnérabilités d'un pare-feu pour accéder à un réseau sécurisé.";
+                    radioElements[3].nextSibling.nodeValue = " Une attaque de phishing visant à obtenir des informations sensibles en usurpant l'identité d'un site web.";
+                    // Mettez à jour la réponse correcte et les mauvaises réponses
+                    radioElements[1].value = "a"; // Correct answer
+                    radioElements[0].value = "b";
+                    radioElements[2].value = "c";
+                    radioElements[3].value = "d";
+                    break;
+                case 3:
+                    questionElement.innerHTML = "Quelle est la différence entre ARP (Address Resolution Protocol) et RARP (Reverse Address Resolution Protocol)?";
+                    radioElements[0].nextSibling.nodeValue = " ARP est utilisé pour associer des adresses MAC à des adresses IP, tandis que RARP est utilisé pour associer des adresses IP à des adresses MAC.";
+                    radioElements[1].nextSibling.nodeValue = " ARP est utilisé pour associer des adresses IP à des adresses MAC, tandis que RARP est utilisé pour résoudre des noms de domaine.";
+                    radioElements[2].nextSibling.nodeValue = " ARP est utilisé pour résoudre les adresses IP des serveurs DNS, tandis que RARP est utilisé pour configurer les adresses IP dynamiquement.";
+                    radioElements[3].nextSibling.nodeValue = " ARP est utilisé pour router les paquets de données sur un réseau, tandis que RARP est utilisé pour vérifier la fiabilité des connexions réseau.";
+                    // Mettez à jour la réponse correcte et les mauvaises réponses
+                    radioElements[0].value = "a"; // Correct answer
+                    radioElements[1].value = "b";
+                    radioElements[2].value = "c";
+                    radioElements[3].value = "d";
+                    break;
+                case 4:
+                    questionElement.innerHTML = "Si une attaque ARP est réalisée, quelle couche OSI est affectée ?";
+                    radioElements[0].nextSibling.nodeValue = " Couche physique";
+                    radioElements[1].nextSibling.nodeValue = " Couche liaison de données";
+                    radioElements[2].nextSibling.nodeValue = " Couche réseau ";
+                    radioElements[3].nextSibling.nodeValue = " Couche transport";
+                    // Mettez à jour la réponse correcte et les mauvaises réponses
+                    radioElements[0].value = "b"; // Correct answer
+                    radioElements[1].value = "a";
+                    radioElements[2].value = "c";
+                    radioElements[3].value = "d";
+                    break;
 
-            default:
-                // Si toutes les questions ont été posées, réinitialisez la variable currentQuestion
-                currentQuestion = 1;
-                closePopup(); // Fermer le pop-up si toutes les questions ont été posées
-                break;
+                default:
+                    // Si toutes les questions ont été posées, réinitialisez la variable currentQuestion
+                    currentQuestion = 1;
+                    closePopup(); // Fermer le pop-up si toutes les questions ont été posées
+                    break;
+            }
+
+            // Réinitialisez la sélection des réponses
+            for (var i = 0; i < radioElements.length; i++) {
+                radioElements[i].checked = false;
+            }
         }
-
-        // Réinitialisez la sélection des réponses
-        for (var i = 0; i < radioElements.length; i++) {
-            radioElements[i].checked = false;
-        }
-    }
 
     function popupButtonClick() {
         if (currentQuestion < 4) {
@@ -302,9 +317,10 @@ if(!$_SESSION['id']){
         var learnMoreButton = document.createElement('button');
         learnMoreButton.innerHTML = "En savoir plus sur ce protocole";
         learnMoreButton.onclick = function() {
-            // Redirection vers la page d'informations ARP lorsque le bouton est cliqué
-            window.location.href = "en_savoir_plus_arp.php";
-        };
+    // Ouvre le lien dans une nouvelle fenêtre
+    window.open("https://fr.wikipedia.org/wiki/Address_Resolution_Protocol", "_blank");
+};
+
         popupText.appendChild(document.createElement('br'));
         popupText.appendChild(learnMoreButton);
 

@@ -40,8 +40,14 @@ if(!$_SESSION['id']){
             margin-bottom: 20px;
         }
         form p {
-            margin-bottom: 10px;
+            font-size: 30px; /* Remplacez la valeur par celle qui vous convient */
+   
+            margin-bottom: 30px;
             font-weight: bold;
+        }
+
+        form div {
+        margin-bottom: 20px; /* Ajoute une marge de 20px entre chaque groupe de réponses */
         }
         form label {
         margin-bottom: 10px; /* Add margin-bottom to create space between radio choices */
@@ -65,6 +71,7 @@ if(!$_SESSION['id']){
         }
         /* Popup styles */
         .popup {
+            color: black; /* Change the color of "Félicitations" to black */
             display: none;
             position: fixed;
             top: 50%;
@@ -156,14 +163,18 @@ if(!$_SESSION['id']){
     <h1>Quiz sur le Protocole DNS</h1>
     <img src="assets/img/logo.png" class="main-logo" style="max-width:300px; width:100%; margin-top:-60px; margin-bottom:20px" />
     <form onsubmit="submitForm(event)">
-        <h2>Qu'est-ce que le protocole DNS (Domain Name System) ?</h2>
+        <p>Qu'est-ce que le protocole DNS (Domain Name System) ?<p>
         <div>
-            <input type="radio" name="reponse" value="c"> <label for="reponse_c">Un protocole de sécurité utilisé pour chiffrer les communications réseau.</label><br>
-            <input type="radio" name="reponse" value="b"> <label for="reponse_b">Un protocole de routage utilisé pour déterminer le meilleur chemin pour les paquets de données.</label><br>
+            <input type="radio" name="reponse" value="c" label for="reponse_c"> Un protocole de sécurité utilisé pour chiffrer les communications réseau.<br>
         </div>
         <div>
-            <input type="radio" name="reponse" value="a"> <label for="reponse_a">Un protocole de résolution d'adresse utilisé pour associer des adresses IP à des adresses MAC.</label><br>
-            <input type="radio" name="reponse" value="d"> <label for="reponse_d">Un protocole de transfert de fichiers utilisé pour copier des données entre des serveurs distants.</label><br>
+            <input type="radio" name="reponse" value="b" label for="reponse_b"> Un protocole de routage utilisé pour déterminer le meilleur chemin pour les paquets de données.<<br>
+        </div>
+        <div>
+            <input type="radio" name="reponse" value="a" label for="reponse_a"> Un protocole de résolution d'adresse utilisé pour associer des adresses IP à des adresses MAC.<br>
+        </div>
+        <div>
+            <input type="radio" name="reponse" value="d" label for="reponse_d"> Un protocole de transfert de fichiers utilisé pour copier des données entre des serveurs distants.<br>
         </div>
         <input type="submit" value="Soumettre">
     </form>
@@ -311,9 +322,10 @@ if(!$_SESSION['id']){
         var learnMoreButton = document.createElement('button');
         learnMoreButton.innerHTML = "En savoir plus sur ce protocole";
         learnMoreButton.onclick = function() {
-            // Redirection vers la page d'informations ARP lorsque le bouton est cliqué
-            window.location.href = "en_savoir_plus_arp.php";
-        };
+    // Ouvre le lien dans une nouvelle fenêtre
+    window.open("https://fr.wikipedia.org/wiki/Domain_Name_Service", "_blank");
+};
+
         popupText.appendChild(document.createElement('br'));
         popupText.appendChild(learnMoreButton);
 
