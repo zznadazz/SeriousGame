@@ -1,0 +1,381 @@
+<?php
+
+session_start();
+if(!$_SESSION['id']){
+    header("location:deconnexion.php");
+}
+;
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Secret Republic of Hackers</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="js13kpwa.webmanifest">
+    <link type="text/css" rel="stylesheet" href="assets/css/reset.css?1609499614" />
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css?1609499613" />
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css?1609499615" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600&amp;subset=latin-ext" rel="stylesheet">
+</head>
+	<body class="noselect">
+		
+		<h2 class="level">
+			L1		</h2>
+
+			<div class="toolbar-top-right">
+			<i class="fa fa-cube"></i> 101		</div>
+	
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			<nav class="navbar navbar-default navbar-fixed-bottom">
+			  <div class="container">
+
+			    <div class="collapse navbar-collapse" id="menu">
+			      <ul class="nav navbar-nav text-center" >
+                    <!--
+					<li><a href="#dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i></a></li>
+					<li><a href="#quests"><i class="fa fa-crosshairs" aria-hidden="true"></i></a></li>
+			        <li><a href="#skills"><i class="fa fa-diamond" aria-hidden="true"></i></a></li>
+			        <li><a href="#knowledge"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+					<li><a href="#train"><i class="fa fa-calculator" aria-hidden="true"></i></a></li>
+					-->
+                    <li><a href="section.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    <li><a href="rankings.php"><i class="fa fa-trophy" aria-hidden="true"></i></a></li>
+			      </ul>
+						
+			      <ul class="nav navbar-nav navbar-right text-center">
+                        <!--
+						<li ><a href="#conversations"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+			        	<li ><a href="#rewards"><i class="fa fa-gift" aria-hidden="true"></i></a></li>
+			      		<li><a href="rankings.php"><i class="fa fa-trophy" aria-hidden="true"></i></a></li>
+                    -->
+						<li><a href="forgot-password.php"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        <li><a href="deconnexion.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+			      </ul>
+					
+				</div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+
+
+				<div class="container-fluid" style="min-height:400px; padding-top:0px;">
+
+							<div class="container">
+									</div>
+			
+<div class="container">
+		<div class="text-center">
+		<ul class="pagination">
+	<li class="previous-inactive">
+			<a href="#" rel="prev">&laquo;</a>
+
+</lin>
+<li class="active">
+			<a href="#">1</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=2">2</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=3">3</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=4">4</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=5">5</a>
+
+</lin>
+<li class="next">
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=2" rel="next">&raquo;</a>
+
+</lin>
+
+</ul>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">1</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/theophrastus">theophrastus</a></p>
+				<small>26 points - 7 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">2</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/doyo">doyo</a></p>
+				<small>22 points - 9 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">3</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/aluc4rd91">aluc4rd91</a></p>
+				<small>19 points - 7 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">4</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/StncldMcNsty">StncldMcNsty</a></p>
+				<small>16 points - 6 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">5</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/denzel">denzel</a></p>
+				<small>15 points - 5 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">6</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/4N0M4LY">4N0M4LY</a></p>
+				<small>12 points - 2 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">6</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/hacker">hacker</a></p>
+				<small>12 points - 2 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">7</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/citypoprevival">citypoprevival</a></p>
+				<small>11 points - 3 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">7</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/cardinal3">cardinal3</a></p>
+				<small>11 points - 3 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">7</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/eXcision">eXcision</a></p>
+				<small>11 points - 3 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">8</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/SpamHack">SpamHack</a></p>
+				<small>10 points - 2 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">8</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/darren0101">darren0101</a></p>
+				<small>10 points - 2 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">8</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/Minikea">Minikea</a></p>
+				<small>10 points - 2 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">8</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/yesdaba">yesdaba</a></p>
+				<small>10 points - 0 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">8</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/zerox71">zerox71</a></p>
+				<small>10 points - 2 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">9</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/john">john</a></p>
+				<small>9 points - 1 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">9</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/Thunder">Thunder</a></p>
+				<small>9 points - 1 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">9</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/mick6671">mick6671</a></p>
+				<small>9 points - 1 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">9</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/dot">dot</a></p>
+				<small>9 points - 1 points</small>
+			</div>
+		</div>
+	</div>
+			<div class="well">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			<div style="    font-size: 40px;margin-bottom: -20px;">9</div>
+			</div>
+			<div class="col-xs-10">
+				<p style="margin:0"><a href="https://secretrepublic.nenuadrian.com/hacker/access/cardinal2">cardinal2</a></p>
+				<small>9 points - 1 points</small>
+			</div>
+		</div>
+	</div>
+				<div class="text-center">
+		<ul class="pagination">
+	<li class="previous-inactive">
+			<a href="#" rel="prev">&laquo;</a>
+
+</lin>
+<li class="active">
+			<a href="#">1</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=2">2</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=3">3</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=4">4</a>
+
+</lin>
+<li>
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=5">5</a>
+
+</lin>
+<li class="next">
+			<a href="https://secretrepublic.nenuadrian.com/rankings?page=2" rel="next">&raquo;</a>
+
+</lin>
+
+</ul>
+	</div></div>
+
+		</div>
+		<footer>
+			
+					</footer>
+					<script type="text/javascript" src="assets/js/jquery-3.1.0.min.js?1609499617"></script>
+					<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+					<script type="text/javascript" src="assets/js/bootstrap.min.js?1609499618"></script>
+					<script type="text/javascript" src="assets/js/progressbar.min.js?1609499618"></script>
+					<script type="text/javascript" src="assets/js/countdown.custom.js?1609499618"></script>
+					<script type="text/javascript" src="assets/js/global.js?1609499618"></script>
+				
+					<script type="text/javascript"></script>
+					<script>
+						googleAnalytics('user_622')
+					</script>
+
+		</script>
+	</body>
+</html>
